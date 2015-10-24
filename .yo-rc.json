@@ -1,0 +1,24 @@
+{
+  "generator-jhipster": {
+    "baseName": "app",
+    "packageName": "net.org.selector.app",
+    "packageFolder": "net/org/selector/app",
+    "authenticationType": "oauth2",
+    "hibernateCache": "no",
+    "clusteredHttpSession": "no",
+    "websocket": "spring-websocket",
+    "databaseType": "mongodb",
+    "devDatabaseType": "mongodb",
+    "prodDatabaseType": "mongodb",
+    "searchEngine": "no",
+    "useSass": false,
+    "buildTool": "maven",
+    "frontendBuilder": "grunt",
+    "enableTranslation": false,
+    "enableSocialSignIn": false,
+    "rememberMeKey": "14a3fb586656c950180559ec432d567b6f41e57a",
+    "testFrameworks": [
+      "gatling"
+    ]
+  }
+}
