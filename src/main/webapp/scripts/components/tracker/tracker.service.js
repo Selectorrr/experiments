@@ -1,4 +1,4 @@
-define(['./module'], function (module) {
+define(['./module', 'sockjs-client'], function (module, SockJS) {
     'use strict';
 
     module.factory('Tracker', function ($rootScope, $cookies, $http, $q) {
