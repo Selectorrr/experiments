@@ -1,7 +1,6 @@
-'use strict';
-
-angular.module('appApp')
-    .controller('HealthController', function ($scope, MonitoringService, $modal) {
+define(['../module'], function (module) {
+    'use strict';
+    module.controller('HealthController', function ($scope, MonitoringService, $modal) {
         $scope.updatingHealth = true;
         $scope.separator = '.';
 
@@ -147,4 +146,5 @@ angular.module('appApp')
               return remainder ? ' - ' + remainder : '';
             }
         };
+    });
     });

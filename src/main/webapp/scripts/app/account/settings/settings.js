@@ -1,7 +1,6 @@
-'use strict';
-
-angular.module('appApp')
-    .config(function ($stateProvider) {
+define(['../module'], function (module) {
+    'use strict';
+    module.config(function ($stateProvider) {
         $stateProvider
             .state('settings', {
                 parent: 'account',
@@ -16,8 +15,7 @@ angular.module('appApp')
                         controller: 'SettingsController'
                     }
                 },
-                resolve: {
-                    
-                }
+                resolve: {}
             });
     });
+});

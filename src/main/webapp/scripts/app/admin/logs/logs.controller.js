@@ -1,7 +1,6 @@
-'use strict';
-
-angular.module('appApp')
-    .controller('LogsController', function ($scope, LogsService) {
+define(['../module'], function (module) {
+    'use strict';
+    module.controller('LogsController', function ($scope, LogsService) {
         $scope.loggers = LogsService.findAll();
 
         $scope.changeLevel = function (name, level) {
@@ -9,4 +8,5 @@ angular.module('appApp')
                 $scope.loggers = LogsService.findAll();
             });
         };
+    });
     });

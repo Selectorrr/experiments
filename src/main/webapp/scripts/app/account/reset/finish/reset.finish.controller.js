@@ -1,19 +1,23 @@
-'use strict';
-
-angular.module('appApp')
-    .controller('ResetFinishController', function ($scope, $stateParams, $timeout, Auth) {
+define(['../../module'], function (module) {
+    'use strict';
+    module.controller('ResetFinishController', function ($scope, $stateParams, $timeout, Auth) {
 
         $scope.keyMissing = $stateParams.key === undefined;
         $scope.doNotMatch = null;
 
         $scope.resetAccount = {};
-        $timeout(function (){angular.element('[ng-model="resetAccount.password"]').focus();});
+        $timeout(function () {
+            angular.element('[ng-model="resetAccount.password"]').focus();
+        });
 
-        $scope.finishReset = function() {
+        $scope.finishReset = function () {
             if ($scope.resetAccount.password !== $scope.confirmPassword) {
                 $scope.doNotMatch = 'ERROR';
             } else {
-                Auth.resetPasswordFinish({key: $stateParams.key, newPassword: $scope.resetAccount.password}).then(function () {
+                Auth.resetPasswordFinish({
+                    key: $stateParams.key,
+                    newPassword: $scope.resetAccount.password
+                }).then(function () {
                     $scope.success = 'OK';
                 }).catch(function (response) {
                     $scope.success = null;
@@ -24,3 +28,4 @@ angular.module('appApp')
 
         };
     });
+});

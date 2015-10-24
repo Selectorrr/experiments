@@ -1,7 +1,6 @@
-'use strict';
-
-angular.module('appApp')
-    .config(function ($stateProvider) {
+define(['../../module'], function (module) {
+    'use strict';
+    module.config(function ($stateProvider) {
         $stateProvider
             .state('finishReset', {
                 parent: 'account',
@@ -15,8 +14,7 @@ angular.module('appApp')
                         controller: 'ResetFinishController'
                     }
                 },
-                resolve: {
-                    
-                }
+                resolve: {}
             });
     });
+});

@@ -1,5 +1,6 @@
-angular.module('appApp')
-    .config(function ($stateProvider) {
+define(['../module'], function (module) {
+    'use strict';
+    module.config(function ($stateProvider) {
         $stateProvider
             .state('tracker', {
                 parent: 'admin',
@@ -14,14 +15,13 @@ angular.module('appApp')
                         controller: 'TrackerController'
                     }
                 },
-                resolve: {
-                    
-                },
-                onEnter: function(Tracker) {
+                resolve: {},
+                onEnter: function (Tracker) {
                     Tracker.subscribe();
                 },
-                onExit: function(Tracker) {
+                onExit: function (Tracker) {
                     Tracker.unsubscribe();
-                },
+                }
             });
     });
+});

@@ -1,7 +1,6 @@
-'use strict';
-
-angular.module('appApp')
-    .controller('MetricsController', function ($scope, MonitoringService, $modal) {
+define(['../module'], function (module) {
+    'use strict';
+    module.controller('MetricsController', function ($scope, MonitoringService, $modal) {
         $scope.metrics = {};
         $scope.updatingMetrics = true;
 
@@ -56,4 +55,5 @@ angular.module('appApp')
                 });
             });
         };
+    });
     });

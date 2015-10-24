@@ -1,8 +1,8 @@
-'use strict';
-
-angular.module('appApp')
-    .controller('ConfigurationController', function ($scope, ConfigurationService) {
+define(['../module'], function (module) {
+    'use strict';
+    module.controller('ConfigurationController', function ($scope, ConfigurationService) {
         ConfigurationService.get().then(function(configuration) {
             $scope.configuration = configuration;
         });
+    });
     });

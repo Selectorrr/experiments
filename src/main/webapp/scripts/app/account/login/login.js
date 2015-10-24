@@ -1,13 +1,12 @@
-'use strict';
-
-angular.module('appApp')
-    .config(function ($stateProvider) {
+define(['../module'], function (module) {
+    'use strict';
+    module.config(function ($stateProvider) {
         $stateProvider
             .state('login', {
                 parent: 'account',
                 url: '/login',
                 data: {
-                    authorities: [], 
+                    authorities: [],
                     pageTitle: 'Sign in'
                 },
                 views: {
@@ -16,8 +15,7 @@ angular.module('appApp')
                         controller: 'LoginController'
                     }
                 },
-                resolve: {
-                    
-                }
+                resolve: {}
             });
     });
+});

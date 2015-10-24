@@ -1,7 +1,6 @@
-'use strict';
-
-angular.module('appApp')
-    .controller('SettingsController', function ($scope, Principal, Auth) {
+define(['../module'], function (module) {
+    'use strict';
+    module.controller('SettingsController', function ($scope, Principal, Auth) {
         $scope.success = null;
         $scope.error = null;
         Principal.identity(true).then(function(account) {
@@ -20,4 +19,5 @@ angular.module('appApp')
                 $scope.error = 'ERROR';
             });
         };
+    });
     });

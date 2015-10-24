@@ -1,10 +1,10 @@
-'use strict';
-
-angular.module('appApp')
-    .config(function ($stateProvider) {
+define(['./module'], function (module) {
+    'use strict';
+    module.config(function ($stateProvider) {
         $stateProvider
             .state('admin', {
                 abstract: true,
                 parent: 'site'
             });
     });
+});

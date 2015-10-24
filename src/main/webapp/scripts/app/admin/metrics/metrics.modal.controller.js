@@ -1,7 +1,6 @@
-'use strict';
-
-angular.module('appApp')
-    .controller('MetricsModalController', function($scope, $modalInstance, threadDump) {
+define(['../module'], function (module) {
+    'use strict';
+    module.controller('MetricsModalController', function ($scope, $modalInstance, threadDump) {
 
         $scope.threadDump = threadDump;
         $scope.threadDumpRunnable = 0;
@@ -39,4 +38,5 @@ angular.module('appApp')
                 return 'label-danger';
             }
         };
+    });
     });

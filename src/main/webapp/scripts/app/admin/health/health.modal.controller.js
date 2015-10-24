@@ -1,7 +1,6 @@
-'use strict';
-
-angular.module('appApp')
-    .controller('HealthModalController', function($scope, $modalInstance, currentHealth, baseName, subSystemName) {
+define(['../module'], function (module) {
+    'use strict';
+    module.controller('HealthModalController', function ($scope, $modalInstance, currentHealth, baseName, subSystemName) {
 
         $scope.currentHealth = currentHealth;
         $scope.baseName = baseName, $scope.subSystemName = subSystemName;
@@ -9,4 +8,5 @@ angular.module('appApp')
         $scope.cancel = function() {
             $modalInstance.dismiss('cancel');
         };
+    });
     });

@@ -1,7 +1,6 @@
-'use strict';
-
-angular.module('appApp')
-    .controller('UserManagementController', function ($scope, User, ParseLinks) {
+define(['../module'], function (module) {
+    'use strict';
+    module.controller('UserManagementController', function ($scope, User, ParseLinks) {
         $scope.users = [];
         $scope.authorities = ["ROLE_USER", "ROLE_ADMIN"];
 
@@ -57,4 +56,5 @@ angular.module('appApp')
             $scope.editForm.$setPristine();
             $scope.editForm.$setUntouched();
         };
+    });
     });

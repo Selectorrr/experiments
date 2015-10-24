@@ -1,7 +1,6 @@
-'use strict';
-
-angular.module('appApp')
-    .config(function ($stateProvider) {
+define(['../module'], function (module) {
+    'use strict';
+    module.config(function ($stateProvider) {
         $stateProvider
             .state('user-management', {
                 parent: 'admin',
@@ -17,7 +16,7 @@ angular.module('appApp')
                     }
                 },
                 resolve: {
-                    
+
                 }
             })
             .state('user-management-detail', {
@@ -33,8 +32,7 @@ angular.module('appApp')
                         controller: 'UserManagementDetailController'
                     }
                 },
-                resolve: {
-                    
-                }
+                resolve: {}
             });
+    });
     });

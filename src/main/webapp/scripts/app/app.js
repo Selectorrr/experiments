@@ -16,7 +16,8 @@ define([
     'ngInfiniteScroll',
     'sockjs-client',
     'stomp-websocket',
-    '../components/index'
+    '../components/index',
+    './index'
     //'./controllers/index',
     //'./directives/index',
     //'./filters/index',

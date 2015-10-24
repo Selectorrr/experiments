@@ -1,7 +1,6 @@
-'use strict';
-
-angular.module('appApp')
-    .controller('UserManagementDetailController', function ($scope, $stateParams, User) {
+define(['../module'], function (module) {
+    'use strict';
+    module.controller('UserManagementDetailController', function ($scope, $stateParams, User) {
         $scope.user = {};
         $scope.load = function (login) {
             User.get({login: login}, function(result) {
@@ -9,4 +8,5 @@ angular.module('appApp')
             });
         };
         $scope.load($stateParams.login);
+    });
     });

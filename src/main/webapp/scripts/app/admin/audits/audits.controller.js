@@ -1,7 +1,6 @@
-'use strict';
-
-angular.module('appApp')
-    .controller('AuditsController', function ($scope, $filter, AuditsService) {
+define(['../module'], function (module) {
+    'use strict';
+    module.controller('AuditsController', function ($scope, $filter, AuditsService) {
         $scope.onChangeDate = function () {
             var dateFormat = 'yyyy-MM-dd';
             var fromDate = $filter('date')($scope.fromDate, dateFormat);
@@ -33,4 +32,5 @@ angular.module('appApp')
         $scope.today();
         $scope.previousMonth();
         $scope.onChangeDate();
+    });
     });

@@ -1,7 +1,6 @@
-'use strict';
-
-angular.module('appApp')
-    .config(function ($stateProvider) {
+define(['./module'], function (module) {
+    'use strict';
+    module.config(function ($stateProvider) {
         $stateProvider
             .state('error', {
                 parent: 'site',
@@ -15,9 +14,7 @@ angular.module('appApp')
                         templateUrl: 'scripts/app/error/error.html'
                     }
                 },
-                resolve: {
-                    
-                }
+                resolve: {}
             })
             .state('accessdenied', {
                 parent: 'site',
@@ -30,8 +27,7 @@ angular.module('appApp')
                         templateUrl: 'scripts/app/error/accessdenied.html'
                     }
                 },
-                resolve: {
-                    
-                }
+                resolve: {}
             });
     });
+});

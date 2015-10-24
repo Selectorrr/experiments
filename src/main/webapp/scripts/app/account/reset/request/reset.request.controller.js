@@ -1,13 +1,14 @@
-'use strict';
-
-angular.module('appApp')
-    .controller('RequestResetController', function ($rootScope, $scope, $state, $timeout, Auth) {
+define(['../../module'], function (module) {
+    'use strict';
+    module.controller('RequestResetController', function ($rootScope, $scope, $state, $timeout, Auth) {
 
         $scope.success = null;
         $scope.error = null;
         $scope.errorEmailNotExists = null;
         $scope.resetAccount = {};
-        $timeout(function (){angular.element('[ng-model="resetAccount.email"]').focus();});
+        $timeout(function () {
+            angular.element('[ng-model="resetAccount.email"]').focus();
+        });
 
         $scope.requestReset = function () {
 
@@ -27,3 +28,4 @@ angular.module('appApp')
         }
 
     });
+});

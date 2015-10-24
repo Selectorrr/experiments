@@ -1,19 +1,20 @@
-'use strict';
-
-angular.module('appApp')
-    .controller('RegisterController', function ($scope, $timeout, Auth) {
+define(['../module'], function (module) {
+    'use strict';
+    module.controller('RegisterController', function ($scope, $timeout, Auth) {
         $scope.success = null;
         $scope.error = null;
         $scope.doNotMatch = null;
         $scope.errorUserExists = null;
         $scope.registerAccount = {};
-        $timeout(function (){angular.element('[ng-model="registerAccount.login"]').focus();});
+        $timeout(function () {
+            angular.element('[ng-model="registerAccount.login"]').focus();
+        });
 
         $scope.register = function () {
             if ($scope.registerAccount.password !== $scope.confirmPassword) {
                 $scope.doNotMatch = 'ERROR';
             } else {
-                $scope.registerAccount.langKey =  'en' ;
+                $scope.registerAccount.langKey = 'en';
                 $scope.doNotMatch = null;
                 $scope.error = null;
                 $scope.errorUserExists = null;
@@ -34,3 +35,4 @@ angular.module('appApp')
             }
         };
     });
+});

@@ -1,5 +1,6 @@
-angular.module('appApp')
-    .controller('TrackerController', function ($scope, AuthServerProvider, $cookies, $http, Tracker) {
+define(['../module'], function (module) {
+    'use strict';
+    module.controller('TrackerController', function ($scope, AuthServerProvider, $cookies, $http, Tracker) {
         // This controller uses a Websocket connection to receive user activities in real-time.
 
         $scope.activities = [];
@@ -23,4 +24,5 @@ angular.module('appApp')
                 $scope.activities.push(activity);
             }
         };
+    });
     });
