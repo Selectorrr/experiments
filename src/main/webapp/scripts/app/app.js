@@ -30,6 +30,7 @@ define([
             'ngResource', 'ui.router', 'ngCookies', 'ngAria', 'ngCacheBuster', 'ngFileUpload', 'infinite-scroll',
             'appApp.interceptors',
             'appApp.auth',
+            'appApp.admin',
             'appApp.tracker',
             'appApp.util',
             'appApp.admin',
@@ -39,7 +40,6 @@ define([
             'appApp.main',
             'appApp.error',
             'appApp.entities',
-            'appApp.admin',
             'appApp.account'
         ])
 

@@ -3,5 +3,5 @@
  */
 define(['angular'], function (ng) {
     'use strict';
-    return ng.module('appApp.admin', []);
+    return ng.module('appApp.admin');
 });
