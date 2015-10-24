@@ -3,6 +3,7 @@
  */
 define([
     './main.controller',
-    './main'
+    './main',
+    './main-page.jsx'
 ], function () {
 });

@@ -27,7 +27,10 @@
     "stomp-websocket": "2.3.4",
     "swagger-ui": "2.1.2",
     "requirejs": "latest",
-    "requirejs-domready": "latest"
+    "requirejs-domready": "latest",
+    "react": "0.14.0",
+    "ngReact": "0.1.7",
+    "material-ui": "0.13.0"
   },
   "devDependencies": {
     "angular-mocks": "1.4.5",

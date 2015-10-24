@@ -16,18 +16,17 @@ define([
     'ngInfiniteScroll',
     'sockjs-client',
     'stomp-websocket',
+    'react',
+    'ngReact',
     '../components/index',
     './index'
-    //'./controllers/index',
-    //'./directives/index',
-    //'./filters/index',
-    //'./services/index'
 ], function (modernizr, jquery, angular) {
     'use strict';
     angular.module('appApp', [
             'LocalStorageModule',
             'ui.bootstrap', // for modal dialogs
             'ngResource', 'ui.router', 'ngCookies', 'ngAria', 'ngCacheBuster', 'ngFileUpload', 'infinite-scroll',
+            'react',
             'appApp.interceptors',
             'appApp.auth',
             'appApp.admin',
