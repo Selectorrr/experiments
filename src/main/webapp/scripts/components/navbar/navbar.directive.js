@@ -1,7 +1,6 @@
-'use strict';
-
-angular.module('appApp')
-    .directive('activeLink', function(location) {
+define(['./module'], function (module) {
+    'use strict';
+    module.directive('activeLink', function (location) {
         return {
             restrict: 'A',
             link: function (scope, element, attrs) {
@@ -9,7 +8,7 @@ angular.module('appApp')
                 var path = attrs.href;
                 path = path.substring(1); //hack because path does bot return including hashbang
                 scope.location = location;
-                scope.$watch('location.path()', function(newPath) {
+                scope.$watch('location.path()', function (newPath) {
                     if (path === newPath) {
                         element.addClass(clazz);
                     } else {
@@ -19,3 +18,4 @@ angular.module('appApp')
             }
         };
     });
+});

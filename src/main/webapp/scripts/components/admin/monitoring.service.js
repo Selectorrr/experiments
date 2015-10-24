@@ -1,7 +1,6 @@
-'use strict';
-
-angular.module('appApp')
-    .factory('MonitoringService', function ($rootScope, $http) {
+define(['./module'], function (module) {
+    'use strict';
+    module.factory('MonitoringService', function ($rootScope, $http) {
         return {
             getMetrics: function () {
                 return $http.get('metrics/metrics').then(function (response) {
@@ -22,3 +21,4 @@ angular.module('appApp')
             }
         };
     });
+});

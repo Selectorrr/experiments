@@ -1,7 +1,6 @@
-'use strict';
-
-angular.module('appApp')
-    .controller('NavbarController', function ($scope, $location, $state, Auth, Principal, ENV) {
+define(['./module'], function (module) {
+    'use strict';
+    module.controller('NavbarController', function ($scope, $location, $state, Auth, Principal, ENV) {
         $scope.isAuthenticated = Principal.isAuthenticated;
         $scope.$state = $state;
         $scope.inProduction = ENV === 'prod';
@@ -11,3 +10,4 @@ angular.module('appApp')
             $state.go('home');
         };
     });
+});

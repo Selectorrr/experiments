@@ -1,9 +1,10 @@
 /* globals $ */
-'use strict';
+define(['./module'], function (module) {
+    'use strict';
 
-angular.module('appApp')
-    .directive('appAppPager', function() {
+    module.directive('appAppPager', function () {
         return {
             templateUrl: 'scripts/components/form/pager.html'
         };
     });
+});

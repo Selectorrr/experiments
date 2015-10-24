@@ -1,16 +1,16 @@
-'use strict';
-
-angular.module('appApp')
-    .factory('User', function ($resource) {
+define(['./module'], function (module) {
+    'use strict';
+    module.factory('User', function ($resource) {
         return $resource('api/users/:login', {}, {
-                'query': {method: 'GET', isArray: true},
-                'get': {
-                    method: 'GET',
-                    transformResponse: function (data) {
-                        data = angular.fromJson(data);
-                        return data;
-                    }
-                },
-                'update': { method:'PUT' }
-            });
+            'query': {method: 'GET', isArray: true},
+            'get': {
+                method: 'GET',
+                transformResponse: function (data) {
+                    data = angular.fromJson(data);
+                    return data;
+                }
+            },
+            'update': {method: 'PUT'}
         });
+    });
+});

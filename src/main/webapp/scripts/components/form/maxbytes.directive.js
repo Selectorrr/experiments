@@ -1,8 +1,8 @@
 /* globals $ */
-'use strict';
+define(['./module'], function (module) {
+    'use strict';
 
-angular.module('appApp')
-    .directive('maxbytes', function ($q) {
+    module.directive('maxbytes', function ($q) {
         function endsWith(suffix, str) {
             return str.indexOf(suffix, str.length - suffix.length) !== -1;
         }
@@ -33,3 +33,4 @@ angular.module('appApp')
             }
         };
     });
+});

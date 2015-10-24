@@ -5,5 +5,6 @@ define([
     './provider/index',
     './services/index',
     './auth.service',
-    './principal.service'
+    './principal.service',
+    './authority.directive'
 ], function () {});

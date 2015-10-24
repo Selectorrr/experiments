@@ -1,7 +1,6 @@
-'use strict';
-
-angular.module('appApp')
-    .factory('AuditsService', function ($http) {
+define(['./module'], function (module) {
+    'use strict';
+    module.factory('AuditsService', function ($http) {
         return {
             findAll: function () {
                 return $http.get('api/audits/').then(function (response) {
@@ -10,16 +9,22 @@ angular.module('appApp')
             },
             findByDates: function (fromDate, toDate) {
 
-                var formatDate =  function (dateToFormat) {
+                var formatDate = function (dateToFormat) {
                     if (dateToFormat !== undefined && !angular.isString(dateToFormat)) {
                         return dateToFormat.getYear() + '-' + dateToFormat.getMonth() + '-' + dateToFormat.getDay();
                     }
                     return dateToFormat;
                 };
 
-                return $http.get('api/audits/', {params: {fromDate: formatDate(fromDate), toDate: formatDate(toDate)}}).then(function (response) {
+                return $http.get('api/audits/', {
+                    params: {
+                        fromDate: formatDate(fromDate),
+                        toDate: formatDate(toDate)
+                    }
+                }).then(function (response) {
                     return response.data;
                 });
             }
         };
     });
+});

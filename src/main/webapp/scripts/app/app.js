@@ -30,7 +30,11 @@ define([
             'appApp.interceptors',
             'appApp.auth',
             'appApp.tracker',
-            'appApp.util'
+            'appApp.util',
+            'appApp.admin',
+            'appApp.form',
+            'appApp.navbar',
+            'appApp.user'
         ])
 
         .run(function ($rootScope, $location, $window, $http, $state, Auth, Principal) {

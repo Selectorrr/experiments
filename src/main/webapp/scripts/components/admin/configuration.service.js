@@ -1,9 +1,8 @@
-'use strict';
-
-angular.module('appApp')
-    .factory('ConfigurationService', function ($rootScope, $filter, $http) {
+define(['./module'], function (module) {
+    'use strict';
+    module.factory('ConfigurationService', function ($rootScope, $filter, $http) {
         return {
-            get: function() {
+            get: function () {
                 return $http.get('configprops').then(function (response) {
                     var properties = [];
                     angular.forEach(response.data, function (data) {
@@ -15,3 +14,4 @@ angular.module('appApp')
             }
         };
     });
+});
