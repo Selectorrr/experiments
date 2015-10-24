@@ -35,7 +35,12 @@ define([
             'appApp.admin',
             'appApp.form',
             'appApp.navbar',
-            'appApp.user'
+            'appApp.user',
+            'appApp.main',
+            'appApp.error',
+            'appApp.entities',
+            'appApp.admin',
+            'appApp.account'
         ])
 
         .run(function ($rootScope, $location, $window, $http, $state, Auth, Principal) {
