@@ -6,6 +6,9 @@ require.config({
         jquery: {
             exports: 'jQuery'
         },
+        react: {
+            exports: 'React'
+        },
         'angular-cache-buster': {
             deps: [
                 'angular'

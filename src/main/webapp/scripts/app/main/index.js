@@ -4,6 +4,6 @@
 define([
     './main.controller',
     './main',
-    './main-page.jsx'
+    './page.jsx'
 ], function () {
 });

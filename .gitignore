@@ -1,4 +1,5 @@
 /src/main/webapp/bower_components
+*.jsx.js
 ######################
 # Project Specific
 ######################

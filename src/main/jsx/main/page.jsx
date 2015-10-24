@@ -1,5 +1,4 @@
-/** @jsx React.DOM */
-define(['./module'], function (module) {
+define(['./module', 'react'], function (module, React) {
     var page = React.createClass({
         propTypes: {
             fname: React.PropTypes.string.isRequired,

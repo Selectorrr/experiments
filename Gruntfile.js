@@ -304,10 +304,10 @@ module.exports = function (grunt) {
                 files: [
                     {
                         expand: true,     // Enable dynamic expansion.
-                        cwd: 'src/jsx',      // Src matches are relative to this path.
+                        cwd: 'src/main/jsx',      // Src matches are relative to this path.
                         src: ['**/*.jsx'], // Actual pattern(s) to match.
                         dest: 'src/main/webapp/scripts/app',   // Destination path prefix.
-                        ext: '.js',   // Dest filepaths will have this extension.
+                        ext: '.jsx.js',   // Dest filepaths will have this extension.
                         extDot: 'first'   // Extensions in filenames begin after the first dot
                     }
                 ]
